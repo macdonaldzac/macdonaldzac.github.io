@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <style>
+    body{
+        margin:0;
+    }
+    </style>
+</head>
+
+<body>
+    <script>
+        var x = window.innerWidth
+        var y = window.innerHeight
+
+        function setup() {
+            createCanvas(x, y, WEBGL);
+            bImage = localImage("picture.jpeg")
+        }
+
+        function draw() {
+            clear()
+            background("bImage");
+            //i will rotate around the Y axis when i move my mouse horazontaly. i will divide by 100 to decrease mouse sensitivity
+            rotateY(mouseX/100)
+            //i will rotate around the X axis when i move my mouse vertically. i will divide by 100 to decrease mouse sensitivity
+            rotateX(mouseY/100)
+            rect(255,455,300,300)
+            fill("blue")
+            rect(-120,111,300,300)
+            fill("green")
+            rect(86,14,300,300)
+            fill("red")
+            
+            noStroke()
+
+        }
+    </script>
+</body>
+
+</html>
